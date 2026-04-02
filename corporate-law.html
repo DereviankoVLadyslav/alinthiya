@@ -338,35 +338,39 @@
           </p>
         </div>
 
-        <form class="contact-panel reveal reveal-right">
+        <form class="contact-panel reveal reveal-right" data-emailjs-form data-form-name="Corporate Law Contact Form">
+          <input type="hidden" name="page_title" value="Corporate Law" />
+          <input type="hidden" name="page_url" value="" />
+          <input type="hidden" name="service" value="Corporate Law" />
           <div class="form-grid">
             <label>
               <span>Full name</span>
-              <input type="text" placeholder="Your full name" />
+              <input type="text" name="name" placeholder="Your full name" required />
             </label>
 
             <label>
               <span>Email</span>
-              <input type="email" placeholder="you@example.com" />
+              <input type="email" name="email" placeholder="you@example.com" required />
             </label>
 
             <label>
               <span>Company</span>
-              <input type="text" placeholder="Company name" />
+              <input type="text" name="company" placeholder="Company name" />
             </label>
 
             <label>
               <span>Main legal need</span>
-              <input type="text" placeholder="Structuring, governance, contracts..." />
+              <input type="text" name="service_detail" placeholder="Structuring, governance, contracts..." />
             </label>
 
             <label class="full-width">
               <span>Message</span>
-              <textarea rows="5" placeholder="Tell us about your corporate law objective"></textarea>
+              <textarea name="message" rows="5" placeholder="Tell us about your corporate law objective" required></textarea>
             </label>
           </div>
 
           <button type="submit" class="btn btn-primary full-submit">Send Inquiry</button>
+          <p class="form-status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -380,6 +384,14 @@
           <div class="footer-text">
             <span>Phone</span>
             <a href="tel:0986789900">098 678 99 00</a>
+          </div>
+        </div>
+
+        <div class="footer-item">
+          <div class="footer-icon">✉</div>
+          <div class="footer-text">
+            <span>Email</span>
+            <a href="mailto:alinthiyakft@gmail.com">alinthiyakft@gmail.com</a>
           </div>
         </div>
 
@@ -428,5 +440,7 @@
 
     revealItems.forEach(item => observer.observe(item));
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="emailjs-forms.js"></script>
 </body>
 </html>

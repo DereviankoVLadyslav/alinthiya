@@ -234,11 +234,13 @@
           </div>
         </div>
 
-        <form class="contact-form reveal reveal-right">
+        <form class="contact-form reveal reveal-right" data-emailjs-form data-form-name="Main Contact Form">
+          <input type="hidden" name="page_title" value="Alinthiya Consulting" />
+          <input type="hidden" name="page_url" value="" />
           <div class="form-grid">
             <label>
               <span>Full name</span>
-              <input type="text" name="name" placeholder="Your full name" />
+              <input type="text" name="name" placeholder="Your full name" required />
             </label>
 
             <label>
@@ -248,7 +250,7 @@
 
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="you@example.com" />
+              <input type="email" name="email" placeholder="you@example.com" required />
             </label>
 
             <label>
@@ -269,11 +271,12 @@
 
             <label class="full-width">
               <span>Message</span>
-              <textarea name="message" rows="6" placeholder="Tell us a little about your project or request"></textarea>
+              <textarea name="message" rows="6" placeholder="Tell us a little about your project or request" required></textarea>
             </label>
           </div>
 
           <button type="submit" class="btn btn-primary form-submit">Send Inquiry</button>
+          <p class="form-status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -287,6 +290,14 @@
           <div class="footer-text">
             <span>Phone</span>
             <a href="tel:0986789900">098 678 99 00</a>
+          </div>
+        </div>
+
+        <div class="footer-item">
+          <div class="footer-icon">✉</div>
+          <div class="footer-text">
+            <span>Email</span>
+            <a href="mailto:alinthiyakft@gmail.com">alinthiyakft@gmail.com</a>
           </div>
         </div>
 
@@ -335,5 +346,7 @@
 
     revealItems.forEach(item => observer.observe(item));
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="emailjs-forms.js"></script>
 </body>
 </html>

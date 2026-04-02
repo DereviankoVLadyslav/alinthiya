@@ -1113,3 +1113,25 @@ textarea:focus {
     transform: none !important;
   }
 }
+
+.form-status {
+  min-height: 1.4em;
+  margin: 14px 0 0;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+.form-status.is-success {
+  color: #8df0c1;
+}
+
+.form-status.is-error {
+  color: #ffb2b2;
+}
+
+.form-submit.is-loading,
+.full-submit.is-loading {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
